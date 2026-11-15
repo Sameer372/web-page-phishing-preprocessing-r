@@ -1,0 +1,20 @@
+stage,metric,value
+raw,Rows in raw dataset,11430
+raw,Columns in raw dataset,89
+raw,Numeric predictor features,87
+raw,Actual missing cells,0
+raw,Exact duplicate rows,0
+raw,Unique URL identifiers,11429
+raw,Repeated URL groups,1
+raw,Additional rows from repeated URLs,1
+raw,Non-positive domain_age values,1843
+raw,  Negative domain_age values,1837
+raw,  Zero domain_age values,6
+raw,Non-positive domain_registration_length values,1450
+raw,  Negative domain_registration_length values,46
+raw,  Zero domain_registration_length values,1404
+raw,URLs longer than 2000 characters,0
+raw,length_url values inconsistent with URL character count,6
+raw,Zero-variance numeric features in raw dataset,6
+raw,Phishing records,5715
+raw,Legitimate records,5715

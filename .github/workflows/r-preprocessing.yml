@@ -1,0 +1,27 @@
+name: Validate R preprocessing workflow
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  run-preprocessing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install required R package
+        run: Rscript -e 'install.packages("ggplot2", repos = "https://cloud.r-project.org")'
+
+      - name: Run data audit, preprocessing, and EDA
+        run: Rscript R/01_preprocess_and_eda.R
